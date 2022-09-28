@@ -16,6 +16,7 @@ library
                , logging-effect
                , prettyprinter
                , process
+               , binary
                , directory
                , attoparsec
                , temporary
@@ -25,18 +26,44 @@ library
                , web3
                , web3-jsonrpc
                , web3-provider
+               , wai
+               , warp
                , cardano-binary
+               , basement
+               , servant
+               , servant-server
+               , servant-client
                , bytestring
                , aeson
+               , lens-aeson
+               , wreq
+               , http-client
+               , http-client-tls
+               , hexstring
+               , containers
+               , lens
+                                          
   exposed-modules:
     Backend
-  other-modules:
-    CKB
-    CKB.Types
-    CKB.RPC
-    CKB.Capsule
-    CKB.Config
     Backend.Utils
+    Bridge
+    Bridge.Cardano
+    Bridge.Cardano.Blockfrost
+    Bridge.Cardano.Types
+    Bridge.Nervos
+    Bridge.Nervos.Cli
+    Bridge.Nervos.Indexer
+    Bridge.Nervos.RPC
+    Bridge.Nervos.SUDT
+    Bridge.Nervos.Types
+    Bridge.Utils
+    CKB
+    CKB.Capsule 
+    CKB.Config
+    CKB.RPC
+    CKB.Types
+    CKB.Utils
+
   ghc-options: -Wall -Wredundant-constraints -Wincomplete-uni-patterns -Wincomplete-record-updates -O -fno-show-valid-hole-fits
 
 executable backend
